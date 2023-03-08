@@ -17,4 +17,14 @@ async function imprimirMensaje() {
 
 imprimirMensaje().then(() => console.log("La promesa se ha resuelto"));
 
+//funcino generadora de indices pares
+function* idsPares() {
+    let id = 0
+    while(true) {
+        yield id += 2
+    }
+}
+const gen=idsPares();
+console.log(gen.next());
+console.log(gen.next());
 
